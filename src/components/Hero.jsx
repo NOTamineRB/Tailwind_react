@@ -1,5 +1,6 @@
 import style from "../style";
 import {discount,robot} from '../assets';
+import GetStarted from './GetStarted'
 const Hero = () => (
 <section id="home" className={`flex md:flex-row flex-col ${style.paddingY}`}>
   <div className={`flex-1 ${style.flexStart}  flex-col xl:px-0 sm:px-16 px-6`}>
@@ -17,13 +18,37 @@ const Hero = () => (
 
 
     <div className="flex flex-row justify-between items-centre w-full">
-      <h1>
-        The Next
-        Payment Method
+      <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px]">
+        The Next <br className="sm:block hidden" />{" "}
+        <span className="text-gradient">Generation</span>{" "}
       </h1>
+      <div className="ss:flex hidden md:mr-4 mr-0">
+          <GetStarted/>
+      </div>
     </div>
 
-
+  <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] w-full">
+  Payment Method
+  </h1>
+    <p className={`${style.paragraph} max-w-[470px] mt-5`}>
+        Le Lorem Ipsum est simplement du faux texte employé dans
+        la composition et la mise en page avant impression.
+        Le Lorem Ipsum est le faux texte standard de
+        l'imprimerie depuis les années 1500,
+        quand un imprimeur anonyme assembla
+        ensemble des morceaux de texte pour
+        réaliser un livre spécimen
+    </p>
+    </div>
+    <div className={`flex-1 flex ${style.flexCenter} md:my-0 my-10 relative`}>
+      <img src={robot} alt="Billing" className="w-[100%] h-[100%] 
+      relative z-index-[5] " />
+      <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient"/>
+      <div className="absolute z-[0] w-[80%] h-[80%] rounded_full buttom-40 white__gradient"/>
+      <div className="absolute z-[0] w-[50%] h-[50%] right-20 buttom-20 blue__gradient"/>
+    </div>
+  <div className={`ss:hidden ${style.flexCenter}`}>
+  <GetStarted/>
   </div>
 </section>
 )
