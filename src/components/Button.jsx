@@ -12,7 +12,9 @@ const Button = ({styles}) => {
        text-[18px]
        text-primary
        outline-none
-       ${styles}`}>
+       ${styles}
+       rounded-[10px]
+       `}>
       Get Started
     </button>
   
